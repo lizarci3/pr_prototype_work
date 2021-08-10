@@ -1,0 +1,8 @@
+version: '3'
+services:
+  shell:
+    image: python:3.8-slim
+    volumes:
+      - .:/pytemplate-dev
+    working_dir: /pytemplate-dev
+    entrypoint: bash

@@ -1,0 +1,14 @@
+# This file tells docker-compose to mount a volume called 'pytemplate-sync' into the 'shell' container.
+# To use this docker-compose file you need to provide both docker-compose files in your cli commands (order matters!!)
+# ex:
+# docker-compose -f docker-compose.yml -f docker-compose-sync.yml run shell
+
+version: '3'
+services:
+  shell:
+    volumes:
+      - pytemplate-sync:/pytemplate-dev
+
+volumes:
+  pytemplate-sync:
+    external: true

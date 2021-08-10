@@ -1,0 +1,27 @@
+[build-system]
+requires = [
+    "setuptools >= 48",
+    "wheel >= 0.29.0",
+    "setuptools_scm[toml]>=6.0"
+]
+build-backend = 'setuptools.build_meta'
+
+[tool.setuptools_scm]
+write_to = "pytemplate/version.py"
+git_describe_command = "git describe --dirty --tags --long --match v* --first-parent"
+
+[tool.isort]
+profile = "black"
+known_future = ["future","past"]
+known_first_party = ["manifold","grimer","dolby","rkconfig","rkdb","rkstorage"]
+default_section = "THIRDPARTY"
+sections = ["FUTURE","STDLIB","THIRDPARTY","FIRSTPARTY","LOCALFOLDER"]
+combine_as_imports = true
+
+[tool.pytest]
+testpaths = "tests"
+addopts = "-v -ra -s"
+
+[tool.pytest.ini_options]
+log_cli = true
+log_cli_level = "DEBUG"

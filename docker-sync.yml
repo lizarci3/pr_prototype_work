@@ -1,0 +1,7 @@
+# For using Docker-Sync to load local code into a docker volume.
+version: "2"
+
+syncs:
+  # IMPORTANT: pytemplate-sync is the name of the docker volume, and should be unique
+  pytemplate-sync:
+    src: '.'
