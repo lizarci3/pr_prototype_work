@@ -9,19 +9,12 @@ for Kinaxis repositories.
 
 In-depth guides for setting up various parts of the repository, including ci and
 documentation, can be found at
-[http://docs.rubikloudcorp.com/pytemplate](http://docs.rubikloudcorp.com/pytemplate)
+
 
 
 # Development
 
 ## Python
-
-Python 2 support for Kinaxis projects has been deprecated since 2020, and any ongoing
-development should not support it except in the most extenuating circumstances. To
-keep up with new language features while maintaining stability, we officially target
-python at one major version behind the most recent stable major version. As of
-April 2021, the latest stable major version is python 3.9, so this repository is
-targeted at python 3.8.
 
 
 ## Docker
@@ -64,14 +57,13 @@ speed to the default `.nox` folder will be *very* slow.
 ## Releasing new versions
 
 When you think a **master commit** (don't do this on non-master commits unless
-you know what you're doing) is ready to be released, go to the [Github releases
-page](https://github.com/rubikloud/pytemplate/releases) and create a new
+you know what you're doing) is ready to be released, go to the and create a new
 release. **Please make sure to add a detailed description of what this version
 adds to Pytemplate**.
 
-Once the release is drafted, it will trigger the [Github actions release workflow](.github/workflows/pythonpublish.yml)
+Once the release is drafted, it will trigger the 
 which will publish a new pypi package. You can confirm that the workflow ran successfully by going to our internal
-[PyPi repository](https://pypicloud.rubikloudcorp.com/) and check that the new package with the right version is there.
+ and check that the new package with the right version is there.
 
 ## Docker-Sync (optional)
 
